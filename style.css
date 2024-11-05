@@ -1,0 +1,85 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+/* big-shoulders-display-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Big Shoulders Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/big-shoulders-display-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lexend-deca-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/lexend-deca-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+  }
+  a{
+    text-decoration: none;
+  }
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    border-radius: 8px;
+  }
+  .card{
+    padding: 3rem;
+    border-r: 8px;
+  }
+  .card:nth-child(1){
+    background-color: var(--bright-orange);
+    border-radius: .5rem 0 0 .5rem;
+  }
+  .card:nth-child(2){
+    background-color: var(--dark-cyan);
+  }
+  .card:nth-child(3){
+    background-color: var(--very-dark-cyan);
+    border-radius:0 .5rem .5rem 0;
+  }
+  h1{
+    color: var(--white);
+    font-size: 2.5rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-block: 2rem;
+  }
+  p{
+    color: var(--very-light-gray);
+    font-size: 0.975rem;
+    line-height: 1.67;
+  }
+  a{
+    display: inline-block;
+    margin-top: 5rem;
+    padding: 1rem 1.875rem;
+    color: var(--very-dark-cyan);
+    border-radius: 50px;
+    background-color: var(--very-light-gray);
+  }
